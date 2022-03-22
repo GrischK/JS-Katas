@@ -91,3 +91,5 @@ function fizzBuzz(num) {
 // console.log(fizzBuzz(20));
 // console.log(fizzBuzz(30));
 // console.log(fizzBuzz(31));
+
+

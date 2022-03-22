@@ -1,3 +1,4 @@
+/*
 // Ecrire une variable contenant ton age (number) et une constante contenant ta date de naissance (string)
 let age = 37;
 const dateOfBirth = "21/01/1985";
@@ -80,3 +81,23 @@ console.log(grischka, grischka.presentation(), grischka.elevatorSpeech());
   - "fizzbuzz" si num est un multiple de 3 et de 5
   - num dans les autres cas
 */
+
+const double = (number) => 2;
+console.log(double());
+
+
+const logParamsAndReturnAddition = (a, b) => {
+  console.log(a, b); 
+  return a + b;
+};
+console.log(logParamsAndReturnAddition(4, 6));
+
+
+const roundMap = (numbers) => {
+  const result = [];
+  for (const number of numbers) {
+    result.push(Math.round(number));
+  }
+  return result;
+};
+console.log(roundMap([2.5, 3.11124, 5.12]));
