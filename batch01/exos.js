@@ -1,4 +1,3 @@
-/*
 // Ecrire une variable contenant ton age (number) et une constante contenant ta date de naissance (string)
 let age = 37;
 const dateOfBirth = "21/01/1985";
@@ -63,25 +62,59 @@ const grischka = {
   hobbies : ["reading", "sleddog", "running"],
   favorite_language : "Javascript",
 
-  presentation: () => { 
-    return `Hello my name is ${this.name}, I'm ${this.age} years old and I like ${this.hobbies.join(', ')}.`
+  // presentation: () => { 
+  //   return `Hello my name is ${this.name}, I'm ${this.age} years old and I like ${this.hobbies.join(",")}.`
+  // },
+
+  // elevatorSpeech: () => {
+  //   return "En reconversion pro, je me suis inscrit à la Wild Code School afin d'apprendre les bases du code pour devenir développeur web"
+  // },
+
+  presentation() { 
+    return `Hello my name is ${this.name}, I'm ${this.age} years old and I like ${this.hobbies.join(", ")}.`
   },
 
-  elevatorSpeech: () => {
-    return "En reconversion pro, je me suis inscrit à la Wild Code School afin d'apprendre les bases du code pour devenir développeur web"
+  elevatorSpeech() {
+    return "En reconversion pro, je me suis inscrit à la Wild Code School afin d'apprendre les bases du code pour devenir développeur web."
   },
+  
 }
 
-console.log(grischka, grischka.presentation(), grischka.elevatorSpeech());
+//console.log(grischka, grischka.presentation(), grischka.elevatorSpeech());
+console.log(grischka);
+console.log(grischka.presentation());
+console.log(grischka.elevatorSpeech());
 //console.log(grischka.presentation());
 
-/* Ecris une fonction fizzBuzz(num) qui te renvoie:
+/*Ecris une fonction fizzBuzz(num) qui te renvoie:
   - "fizz" si num est un multiple de 3
   - "buzz" si num est un multiple de 5
   - "fizzbuzz" si num est un multiple de 3 et de 5
-  - num dans les autres cas
-*/
+  - num dans les autres cas*/
+function fizzBuzz(num){
+  if (num %5 === 0 && num %3 === 0) {
+    return "fizzbuzz";
+  }
 
+  if (num %5 === 0) {
+    return "buzz";
+  }
+
+  if (num %3 === 0) {
+    return "fizz";
+  }
+
+  return `${num}`;
+};
+
+console.log(fizzBuzz(15));
+console.log(fizzBuzz(30));
+console.log(fizzBuzz(5));
+console.log(fizzBuzz(3));
+console.log(fizzBuzz(10));
+console.log(fizzBuzz(7));
+
+/*
 const double = (number) => 2;
 console.log(double());
 
@@ -100,4 +133,4 @@ const roundMap = (numbers) => {
   }
   return result;
 };
-console.log(roundMap([2.5, 3.11124, 5.12]));
+console.log(roundMap([2.5, 3.11124, 5.12]))*/
