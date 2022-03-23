@@ -44,3 +44,15 @@ for (let i = 0; i < characterNames.length; i++) {
   };
 }
 // Crée une fonction `search(needle)` qui te renvoie les personnages dont le nom contient la lettre passée en paramètre
+function search(needle) {
+  let result =[];
+  for (let i = 0; i < characterNames.length; i++) {
+  if (characterNames[i].toLowerCase().includes(needle)) { 
+    result.push(characterNames[i]);
+  }
+  }
+  return result;
+}
+
+console.log(search("a"));
+
