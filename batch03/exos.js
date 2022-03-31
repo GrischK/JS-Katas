@@ -81,12 +81,19 @@ const character = {
 
 // --------------------------------------------------------------------
 // Affiche le nom du personnage (36AIS)
-
+console.log(character.name)
 // Affiche le nombre d'ennemis de 36AIS
-
+console.log(character.enemies.length)
 // Affiche la présentation de 36AIS
-
+console.log(character.toString())
 // Affiche le nom et la race de chaque ami de 36AIS
+function friends(arr) {
+  for (const friend of arr) {
+    console.log(friend.name, friend.species)
+  }
+}
+
+friends(character.friends)
 // Ex: Beau'ne (Lizardfolk)
 
 // Affiche les noms des ennemis humains de 36AIS

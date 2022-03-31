@@ -54,5 +54,5 @@ function search(needle) {
   return result;
 }
 
-console.log(search("a"));
+console.log(search("s"));
 
