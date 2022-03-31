@@ -89,7 +89,7 @@ console.log(character.toString())
 // Affiche le nom et la race de chaque ami de 36AIS
 function friends(arr) {
   for (const friend of arr) {
-    console.log(friend.name, friend.species)
+    console.log(`${friend.name} (${friend.species})`)
   }
 }
 
@@ -97,7 +97,13 @@ friends(character.friends)
 // Ex: Beau'ne (Lizardfolk)
 
 // Affiche les noms des ennemis humains de 36AIS
+function enemies(arr){
+  for (const enemy of arr) {
+    console.log(enemy.name)
+  }
+}
 
+enemies(character.enemies)
 // ------------------------------------------------------------------------ BONUS
 // ATTENTION! Sur les exercices suivants, n'utilise pas une fonction fléchée (pour des raisons techniques un peu compliquées, une fonction fléchée n'aura pas le comportement attendu ici)
 
