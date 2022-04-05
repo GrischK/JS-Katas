@@ -80,47 +80,58 @@ const character = {
 };
 
 // --------------------------------------------------------------------
-// Affiche le nom du personnage (36AIS)
-console.log(character.name)
-// Affiche le nombre d'ennemis de 36AIS
-console.log(character.enemies.length)
-// Affiche la présentation de 36AIS
-console.log(character.toString())
-// Affiche le nom et la race de chaque ami de 36AIS
-function friends(arr) {
-  for (const friend of arr) {
-    console.log(`${friend.name} (${friend.species})`)
-  }
-}
+// // Affiche le nom du personnage (36AIS)
+// console.log(character.name)
+// // Affiche le nombre d'ennemis de 36AIS
+// console.log(character.enemies.length)
+// // Affiche la présentation de 36AIS
+// console.log(character.toString())
+// // Affiche le nom et la race de chaque ami de 36AIS
+// function friends(arr) {
+//   for (const friend of arr) {
+//     console.log(`${friend.name} (${friend.species})`)
+//   }
+// }
 
-friends(character.friends)
-// Ex: Beau'ne (Lizardfolk)
+// friends(character.friends)
+// // Ex: Beau'ne (Lizardfolk)
 
-// Affiche les noms des ennemis humains de 36AIS
-function enemies(arr){
-  for (const enemy of arr) {
-    console.log(`${enemy.name} est un ennemi`)
-  }
-}
+// // Affiche les noms des ennemis humains de 36AIS
+// function enemies(arr){
+//   for (const enemy of arr) {
+//     console.log(`${enemy.name} est un ennemi`)
+//   }
+// }
 
-enemies(character.enemies)
-// ------------------------------------------------------------------------ BONUS
-// ATTENTION! Sur les exercices suivants, n'utilise pas une fonction fléchée (pour des raisons techniques un peu compliquées, une fonction fléchée n'aura pas le comportement attendu ici)
+// enemies(character.enemies)
+// // ------------------------------------------------------------------------ BONUS
+// // ATTENTION! Sur les exercices suivants, n'utilise pas une fonction fléchée (pour des raisons techniques un peu compliquées, une fonction fléchée n'aura pas le comportement attendu ici)
 
-// Ajoute une fonction toString() à chaque ennemi et ami de 36AIS (**sans** toucher au code en tête de fichier !)
-const charactersSpeak = () => {
-  return `Hi dude, my name is ${this.name} and I'm ${this.species}. My favorite weapon to kill my enemies is ${this.weapon}`
-}
+// // Ajoute une fonction toString() à chaque ennemi et ami de 36AIS (**sans** toucher au code en tête de fichier !)
+// const charactersSpeak = () => {
+//   return `Hi dude, my name is ${this.name} and I'm ${this.species}. My favorite weapon to kill my enemies is ${this.weapon}`
+// }
 
-character.friends.forEach((friend) => {
-  friend.toString = charactersSpeak;
-});
+// character.friends.forEach((friend) => {
+//   friend.toString = charactersSpeak;
+// });
 
-character.enemies.forEach((enemy) => {
-  enemy.toString = charactersSpeak;
-})
+// character.enemies.forEach((enemy) => {
+//   enemy.toString = charactersSpeak;
+// })
 
-console.log(character.friends.toString(), character.enemies.toString());
+// console.log(character.friends.toString(), character.enemies.toString());
 
 
 // Ajoute une fonction presentFriends() à 36AIS, qui présente chacun de ses amis
+const presentFriends = () => {
+  let result = `${character.toString()}`;
+  result += ' Here are my friend :';
+
+  character.friends.forEach((friend) => {
+    const myFriend = `${friend.name} who is ${friend.species}`;
+  })
+  return (result, myFriend);
+}
+
+console.log(presentFriends());

@@ -91,31 +91,31 @@ const character = {
 
 // Affiche le nom et la race de chaque ami de 36AIS
 // Ex: Beau'ne (Lizardfolk)
-character.friends.forEach((friend) => {
+// character.friends.forEach((friend) => {
   // console.log(`${friend.name} (${friend.species})`);
-});
+// });
 
-// Affiche les noms des ennemis humains de 36AIS
-character.enemies.forEach((enemy) => {
-  if (enemy.species === 'Human') {
-    // console.log(enemy.name);
-  }
-});
+// // Affiche les noms des ennemis humains de 36AIS
+// character.enemies.forEach((enemy) => {
+//   if (enemy.species === 'Human') {
+//     // console.log(enemy.name);
+//   }
+// });
 
 // ------------------------------------------------------------------------ BONUS
 // ATTENTION! Sur les exercices suivants, n'utilise pas une fonction fléchée (pour des raisons techniques un peu compliquées, une fonction fléchée n'aura pas le comportement attendu ici)
 
 // Ajoute une fonction toString() à chaque ennemi et ami de 36AIS (**sans** toucher au code en tête de fichier !)
-const myFunc = function () {
-  return `I'm ${this.name}, and I use a ${this.attribute} ${this.weapon} !`;
-};
-character.enemies.forEach((enemy) => {
-  enemy.toString = myFunc;
-});
-character.friends.forEach((friend) => {
-  friend.toString = myFunc;
-});
-// console.log(character);
+// const myFunc = function () {
+//   return `I'm ${this.name}, and I use a ${this.attribute} ${this.weapon} !`;
+// };
+// character.enemies.forEach((enemy) => {
+//   enemy.toString = myFunc;
+// });
+// character.friends.forEach((friend) => {
+//   friend.toString = myFunc;
+// });
+// // console.log(character);
 // console.log(character.friends[0].toString());
 
 // Ajoute une fonction presentFriends() à 36AIS, qui présente chacun de ses amis
@@ -128,4 +128,5 @@ character.presentFriends = function () {
   });
   return results;
 };
-// console.log(character.presentFriends());
+
+console.log(character.presentFriends());
