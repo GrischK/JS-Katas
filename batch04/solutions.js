@@ -47,9 +47,9 @@ for (let i = 0; i < nbPeople; i++) {
 // console.log(people.indexOf('Foo'));
 
 // Bonus: Rends à `people` sa valeur initiale. Ensuite, en utilisant `splice()` à une seule reprise, supprime "Devon" du tableau et remplace le par "Elizabeth" et "Artie". Ton tableau devrait alors avoir cette valeur: ["Greg", "Mary", "Elizabeth", "Artie", "James"]
-people = ['Greg', 'Mary', 'Devon', 'James'];
-people.splice(2, 1, 'Elizabeth', 'Artie');
-console.log(people);
+// people = ['Greg', 'Mary', 'Devon', 'James'];
+// people.splice(2, 1, 'Elizabeth', 'Artie');
+// console.log(people);
 
 // Crée une nouvelle variable `withBob` qui est une copie de `people` à laquelle on ajoute l'élément "Bob" (en une seule opération)
 // const withBob = [...people, 'Bob'];
